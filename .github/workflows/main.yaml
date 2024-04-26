@@ -1,15 +1,13 @@
-name: Run the tests, build the image
-
+name: Run test and build images
 on:
   push:
-   branches:
-     - main
   workflow_dispatch:
 
 jobs:
-    
-  build_and_publish:
+  build:
+
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v1
@@ -20,10 +18,10 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
 
-      - name: Build the package
+      - name: Build
         run: mvn --batch-mode -DskipTests package
 
-      - name: Run the unit tests
+      - name: Test
         run: mvn --batch-mode -Dmaven.test.failure.ignore=true test
 
       - name: Report

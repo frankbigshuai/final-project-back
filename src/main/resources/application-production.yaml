@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: postgres://jackhuynh:rtuAFHJoz4mcJDMIUecIkFSdsqyrYA84@dpg-com2pf0l5elc73bt1tq0-a.oregon-postgres.render.com/flowers_8xvg
+    url: jdbc:postgresql://dpg-com2pf0l5elc73bt1tq0-a.oregon-postgres.render.com:5432/flowers_8xvg
     username: jackhuynh
     password: rtuAFHJoz4mcJDMIUecIkFSdsqyrYA84
 

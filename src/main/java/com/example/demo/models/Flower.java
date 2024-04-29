@@ -26,12 +26,25 @@ public class Flower {
     @Column(name = "flower_name")
     private String name;
 
+    @Column(name = "flower_types")
+    private String types;
+
+    @Column(name = "flower_occasions")
+    private String occasions;
+
+    @Column(name = "flower_colors")
+    private String colors;
+
     @Column(name = "flower_price")
     private double price;
 
-    public Flower(Long id, String name, double price) {
-        this.id = id;
+    public Flower(String name, String types, String occasions, String colors, double price) {
         this.name = name;
+        this.types = types;
+        this.occasions = occasions;
+        this.colors = colors;
         this.price = price;
     }
+
+    
 }
